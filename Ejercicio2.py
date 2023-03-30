@@ -37,10 +37,13 @@ def merge_sort(lista):
             k += 1
     return lista
 
+
 def main():
     lista = [18, 50, 210, 80, 145, 333, 70, 30]
     print(comprobar(lista))
     print(merge_sort(lista))
+    indice = lista.index(145) if 145 in lista else -1
+    print(indice)
     
 
 

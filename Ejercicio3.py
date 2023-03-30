@@ -1,3 +1,5 @@
+import unittest
+
 class Alumno:
     def __init__(self,nombre,nota):
         self.nombre=nombre
@@ -6,10 +8,12 @@ class Alumno:
         print("EL alumno",self.nombre, "se ha creado con éxito")
     def calificacion(self):
         if self.nota>=5:
-            return(self.nombre,"ha aprobado")
+            print("El alumno ha aprobado")
         else:
-            return(self.nombre,"ha suspendido")
+            print("El alumno ha suspendido")
     
+#hacer los test de la clase Alumno
+
 
 if __name__ == "__main__":
     alumno1=Alumno("Juan",7)
