@@ -13,10 +13,18 @@ class Alumno:
             print("El alumno ha suspendido")
     
 #hacer los test de la clase Alumno
-
+class TestAlumno(unittest.TestCase):
+    def test_calificacion(self):
+        alumno1=Alumno("Juan",7)
+        alumno2=Alumno("Ana",3)
+        calif = alumno1.calificacion()
+        calif = alumno2.calificacion()
+        self.assertEqual(calif,"El alumno ha aprobado")
+        self.assertEqual(calif,"El alumno ha suspendido")
 
 if __name__ == "__main__":
     alumno1=Alumno("Juan",7)
     alumno2=Alumno("Ana",3)
     alumno1.calificacion()
     alumno2.calificacion()
+    unittest.main()
